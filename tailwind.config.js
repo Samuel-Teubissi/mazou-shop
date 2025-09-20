@@ -1,4 +1,5 @@
 import { heroui } from '@heroui/theme'
+import lineClamp from '@tailwindcss/line-clamp'
 
 /** @type {import('tailwindcss').Config} */
 const config = {

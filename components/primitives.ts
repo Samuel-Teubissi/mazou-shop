@@ -62,7 +62,7 @@ export const mz_button = tv({
       secondary: 'bg-brand-primary-500',
     },
     hoverText: {
-      primary: 'hover:text-brand-primary-500 hover:text-underline',
+      primary: 'hover:text-brand-primary-500',
       secondary: 'hover:text-white focus:text-white',
     },
     hoverBkg: {

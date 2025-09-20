@@ -9,3 +9,12 @@ import { twMerge } from 'tailwind-merge'
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
+export function formatPrice(valuePrice: string) {
+  const newFormat = Number(valuePrice)
+  // return newFormat.toLocaleString('fr-FR', {
+  //   style: 'currency',
+  //   currency: 'XAF',
+  // })
+  return newFormat.toLocaleString('fr-FR')
+}

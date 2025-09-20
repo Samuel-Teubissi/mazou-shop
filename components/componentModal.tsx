@@ -28,7 +28,7 @@ export const Modal = () => {
             hoverBkg: true,
             border: true,
           }),
-          'min-w-auto',
+          'min-w-auto bg-white/50',
         )}
         startContent={<ShoppingCart className="w-4 h-4" />}
         onPress={() => onOpen()}
