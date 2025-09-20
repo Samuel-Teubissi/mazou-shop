@@ -9,7 +9,7 @@ import { Providers } from './providers'
 import { siteConfig } from '@/config/site'
 import { fontSans } from '@/config/fonts'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/navbar'
-import { Modal } from '@/components/modal'
+import { Modal } from '@/components/componentModal'
 
 export const metadata: Metadata = {
   title: {
@@ -48,7 +48,9 @@ export default function RootLayout({
             <Navbar className="bg-white/30 backdrop-blur-xl">
               <NavbarBrand>
                 <span className="mr-4">LOGO</span>
-                <p className="font-bold text-inherit">Mazou Shop</p>
+                <p className="font-bold text-inherit hidden md:block">
+                  Mazou Shop
+                </p>
               </NavbarBrand>
               <NavbarContent justify="end">
                 <NavbarItem>
