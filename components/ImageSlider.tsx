@@ -21,7 +21,7 @@ function ButtonSlider({ onClick, label, arrow }: ArrowProps) {
       onClick={onClick}
       title={label}
       className={cn(
-        'mz_btn absolute top-1/2 -translate-y-1/2 p-2 rounded-full z-10',
+        'mz_btn mz_trans absolute top-1/2 -translate-y-1/2 p-2 rounded-full z-10',
         arrow === 'left' ? 'left-1' : 'right-1',
       )}
     >

@@ -27,7 +27,7 @@ export default function WhatsAppButton({ message = 'Bonjour !' }) {
     <Link
       href={waWebUrl}
       onClick={handleClick}
-      className="w-full xl:w-4/5 inline-flex justify-center items-center gap-4 p-3 rounded-2xl bg-green-600 text-white hover:bg-green-700"
+      className="mz_trans w-full xl:w-4/5 inline-flex justify-center items-center gap-4 p-3 rounded-2xl bg-green-600 text-white hover:bg-green-700"
       aria-label="Contacter sur WhatsApp"
     >
       Commander sur WhatsApp

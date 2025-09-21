@@ -14,3 +14,7 @@ body {
     position: absolute;
   }
 }
+
+.mz_description {
+  background: url('/images/background-2.png') center/cover no-repeat;
+}
