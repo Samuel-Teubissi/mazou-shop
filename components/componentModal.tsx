@@ -45,7 +45,7 @@ export const Modal = () => {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
-                Modal Title
+                Votre Panier
               </ModalHeader>
               <ModalBody>
                 <p>
