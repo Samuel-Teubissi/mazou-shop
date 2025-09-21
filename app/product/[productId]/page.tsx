@@ -13,6 +13,7 @@ import {
 import WhatsAppButton from '@/components/WhatsappButton'
 import { marked } from 'marked'
 import { Button } from '@heroui/button'
+import Link from 'next/link'
 
 export default async function Page(props: {
   params: Promise<{ productId: string }>
@@ -27,12 +28,18 @@ export default async function Page(props: {
   )
   return (
     <>
-      <Breadcrumbs underline="always">
-        <BreadcrumbItem>Home</BreadcrumbItem>
-        <BreadcrumbItem>{searchParams.categorie}</BreadcrumbItem>
-        <BreadcrumbItem>Product</BreadcrumbItem>
-      </Breadcrumbs>
+      <div className="p-3 text-small text-gray-700 max-w-6xl mx-auto w-full">
+        <Link href="/" title="Mazou Homepage">
+          {'<'} Retourner à l'accceuil
+        </Link>
+      </div>
       <div className="mz_container">
+        <Breadcrumbs>
+          waouh
+          <BreadcrumbItem>Home</BreadcrumbItem>
+          <BreadcrumbItem>{searchParams.categorie}</BreadcrumbItem>
+          <BreadcrumbItem>Product</BreadcrumbItem>
+        </Breadcrumbs>
         <div className="mz_container-body lg:w-5xl xl:w-6xl space-y-4">
           <div className="bg-white p-5 pt-7 uppercase text-xl font-bold">
             {product.title}
@@ -75,7 +82,7 @@ export default async function Page(props: {
               </div>
               <div className="space-y-2">
                 <h3 className="font-bold">Caractéristiques du Produit</h3>
-                <div className="border border-gray-200 w-full xl:w-4/5">
+                <div className="border border-gray-200 w-full text-small">
                   {product.product_caracteristics.map((c, i) => (
                     <div key={i} className="odd:bg-brand-primary-400/15 p-4">
                       {c}

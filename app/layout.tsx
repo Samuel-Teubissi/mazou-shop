@@ -42,7 +42,7 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
           <div className="relative flex flex-col h-screen">
-            <Navbar className="bg-white/30 backdrop-blur-xl">
+            <Navbar className="bg-white/30 backdrop-blur-xl" position="static">
               <NavbarBrand>
                 <span className="mr-4">LOGO</span>
                 <p className="font-bold text-inherit hidden md:block">
@@ -57,12 +57,12 @@ export default function RootLayout({
             </Navbar>
             <main className="lg:mt-16 flex-grow">{children}</main>
             <footer className="bg-[#111] text-white">
-              <div className="max-w-7xl mx-auto w-full flex flex-col justify-center py-3 px-5 lg:px-20 pt-10 pb-28 gap-4">
+              <div className="max-w-7xl mx-auto w-full flex flex-col justify-center py-3 px-5 lg:px-20 pt-14 pb-28 gap-4">
                 <div>
                   <Link
-                    isExternal
+                    // isExternal
                     className="flex items-center gap-1 text-brand-primary-400"
-                    href="#HomMazou"
+                    href="/"
                     title="Mazou Homepage"
                   >
                     <span className="mr-4">LOGO</span>

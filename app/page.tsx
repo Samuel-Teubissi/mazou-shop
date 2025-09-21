@@ -30,7 +30,7 @@ export default function Home() {
       </section>
 
       <div className="mz_container">
-        <div className="mz_container-body">
+        <div className="mz_container-body px-3">
           <div className="uppercase tracking-wide font-bold text-3xl w-2/3 lg:w-[500px] border-b-5 border-brand-primary-500 my-4 py-1">
             SPORT
           </div>
@@ -43,7 +43,7 @@ export default function Home() {
                     isPressable
                     // isHoverable
                     shadow="sm"
-                    className="w-full hover:bg-brand-primary-400/5"
+                    className="w-full border border-transparent mz_trans hover:border-brand-primary-400/50 overflow-visible"
                     title={item.title}
                   >
                     <CardBody className="overflow-visible p-0 relative">
@@ -56,17 +56,17 @@ export default function Home() {
                         width={418}
                         height={250}
                       />
-                      <div className="absolute flex flex-col top-1/3 gap-1 font-bold text-lg z-10">
-                        <span className="py-1 px-6 bg-brand-primary-400/50 w-fit rounded-2xl line-through">
+                      <div className="absolute flex flex-col top-1/3 -left-3 gap-1 font-bold text-lg z-10">
+                        <span className="line-through mz_priceBand bg-gray-400/75 text-medium">
                           {formatPrice(item.old_price)} F
                         </span>
-                        <span className="py-2 px-6 bg-brand-primary-500 w-fit rounded-2xl text-white">
+                        <span className="text-white mz_priceBand bg-brand-primary-400">
                           {formatPrice(item.new_price)} F
                         </span>
                       </div>
                     </CardBody>
-                    <CardFooter className="items-center flex flex-col">
-                      <div className="pt-3 pb-5 px-2 font-bold">
+                    <CardFooter className="items-center flex flex-col px-2 md:px-3">
+                      <div className="pt-3 pb-5 md:px-2 font-bold">
                         <span className="line-clamp-2">{item.title}</span>
                       </div>
                       <Link
