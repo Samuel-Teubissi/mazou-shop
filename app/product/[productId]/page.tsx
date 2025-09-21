@@ -37,7 +37,7 @@ export default async function Page(props: {
           <div className="bg-white p-5 pt-7 uppercase text-xl font-bold">
             {product.title}
           </div>
-          <div className="mz_container-bloc flex flex-col lg:flex-row gap-4">
+          <div className="bg-white lg:p-5 space-y-2 flex flex-col lg:flex-row gap-4">
             <div className="w-full md:w-[500] h-[500] flex items-center bg-brand-primary-500/10 mx-auto">
               <ImageSlider />
             </div>
@@ -64,7 +64,7 @@ export default async function Page(props: {
                 <WhatsAppButton />
               </div>
               <div className="space-y-2">
-                <h3>Tags du produit</h3>
+                <h3 className="font-bold">Tags du produit</h3>
                 <div className="text-gray-700 flex flex-wrap gap-x-4 gap-y-2 text-small">
                   {product.product_tags.map((tag, i) => (
                     <span key={i} className="underline cursor-default">
@@ -74,7 +74,7 @@ export default async function Page(props: {
                 </div>
               </div>
               <div className="space-y-2">
-                <h3>Caractéristiques du Produit</h3>
+                <h3 className="font-bold">Caractéristiques du Produit</h3>
                 <div className="border border-gray-200 w-full xl:w-4/5">
                   {product.product_caracteristics.map((c, i) => (
                     <div key={i} className="odd:bg-brand-primary-400/15 p-4">

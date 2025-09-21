@@ -35,7 +35,12 @@ export const Modal = () => {
       >
         <span className="hidden md:block">Panier</span>
       </Button>
-      <HeroUIModal isOpen={isOpen} size="2xl" onClose={onClose}>
+      <HeroUIModal
+        isOpen={isOpen}
+        size="3xl"
+        onClose={onClose}
+        scrollBehavior="inside"
+      >
         <ModalContent>
           {(onClose) => (
             <>
