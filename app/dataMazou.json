@@ -7,12 +7,19 @@
       "/images/casque-v2.jpg",
       "/images/casque-v3.jpeg"
     ],
-    "new_price": "25000",
-    "old_price": "15000",
+    "new_price": "15000",
+    "old_price": "25000",
+    "product_category": "audio",
     "product_note": "4.7",
     "testimonial": "27",
     "description": "Plongez dans une expérience sonore immersive avec ce casque audio sans fil au design élégant et moderne. Son arceau et ses coussinets en similicuir doux garantissent un confort exceptionnel, même lors de longues sessions d'écoute. Grâce à ses haut-parleurs de haute qualité, profitez de basses profondes, d'aigus clairs et d'un équilibre parfait pour tous les genres musicaux. Conçu pour le quotidien comme pour les moments de détente, il offre : /n -**Connexion Bluetooth rapide et stable**, pour une liberté totale de mouvement /n -**Autonomie longue durée**, idéale pour la musique, les appels ou les films /n -**Design ergonomique**, justable et léger /n -**Finition élégante**, qui s'intègre parfaitement à votre style /n Que vous soyez en voyage, au bureau ou chez vous, ce casque est le compagnon idéal pour un son d'exception et un confort absolu.",
-    "product_profts": "-Casque audio sans fil -Autonomie longue -Design ergonomique -Finition élégante",
-    "product_categories": ["Casque audio, Casque sans fil, Casque Bluetooth"]
+    "product_profits": "-Casque audio sans fil -Autonomie longue -Design ergonomique -Finition élégante",
+    "product_tags": ["Casque audio", "Casque sans fil", "Casque Bluetooth"],
+    "product_caracteristics": [
+      "Disponible en vert et en bleu",
+      "Recharge sans fil",
+      "Chargeur USB-C",
+      "13h d'autonomie"
+    ]
   }
 ]

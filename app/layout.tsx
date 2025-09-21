@@ -58,7 +58,7 @@ export default function RootLayout({
                 </NavbarItem>
               </NavbarContent>
             </Navbar>
-            <main className="mt-16 flex-grow">{children}</main>
+            <main className="lg:mt-16 flex-grow">{children}</main>
             <footer className="w-full flex items-center justify-center py-3 bg-gray-700">
               <Link
                 isExternal

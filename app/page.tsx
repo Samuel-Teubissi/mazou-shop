@@ -6,8 +6,6 @@ import { title, subtitle } from '@/components/primitives'
 import { Card, CardHeader, CardBody, CardFooter } from '@heroui/card'
 import Produits from './dataMazou.json'
 // import Image from 'next/image'
-import { SearchIcon } from 'lucide-react'
-import { FormEvent } from 'react'
 import { SearchInput } from '@/components/SearchInput'
 import { cn, formatPrice } from '@/config/utils'
 import { mz_button as buttonStyles } from '@/components/primitives'
@@ -31,12 +29,12 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="h-[1000px] bg-white w-full flex flex-col pt-8 px-2">
-        <div className="max-w-7xl mx-auto">
-          <div className="uppercase tracking-wide font-bold text-3xl w-2/3 lg:w-[500px] border-b-5 border-brand-primary-500 mb-4 py-1">
+      <div className="mz_container">
+        <div className="mz_container-body">
+          <div className="uppercase tracking-wide font-bold text-3xl w-2/3 lg:w-[500px] border-b-5 border-brand-primary-500 my-4 py-1">
             SPORT
           </div>
-          <div className="container gap-3 items-center grid grid-cols-2 lg:grid-cols-3">
+          <div className="container gap-3 items-center grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {[...Array(3)].map((_, i) => (
               <div key={i}>
                 {Produits.map((item, index) => (
@@ -45,19 +43,20 @@ export default function Home() {
                     isPressable
                     // isHoverable
                     shadow="sm"
-                    className="w-full hover:bg-brand-primary-400/5 hover:shadow-lg"
+                    className="w-full hover:bg-brand-primary-400/5"
                     title={item.title}
                   >
                     <CardBody className="overflow-visible p-0 relative">
                       <Image
                         isZoomed
                         alt={item.title}
+                        radius="none"
                         className="object-cover w-full h-[250]"
                         src={item.img[0]}
                         width={418}
                         height={250}
                       />
-                      <div className="absolute flex flex-col top-1/3 gap-1 font-bold text-lg">
+                      <div className="absolute flex flex-col top-1/3 gap-1 font-bold text-lg z-10">
                         <span className="py-1 px-6 bg-brand-primary-400/50 w-fit rounded-2xl line-through">
                           {formatPrice(item.old_price)} F
                         </span>
@@ -70,14 +69,20 @@ export default function Home() {
                       <div className="pt-3 pb-5 px-2 font-bold">
                         <span className="line-clamp-2">{item.title}</span>
                       </div>
-                      <p
+                      <Link
+                        href={
+                          '/product/' +
+                          item.id +
+                          '?categorie=' +
+                          item.product_category
+                        }
                         className={cn(
                           buttonStyles({ hoverText: 'primary' }),
                           'text-sm text-gray-500 uppercase',
                         )}
                       >
                         Voir les détails
-                      </p>
+                      </Link>
                     </CardFooter>
                   </Card>
                 ))}

@@ -7,7 +7,7 @@ import {
   ModalFooter,
   useDisclosure,
 } from '@heroui/modal'
-import { Button } from '@heroui/button'
+import { Button, ButtonProps } from '@heroui/button'
 import { Link } from '@heroui/link'
 import { ShoppingCart } from 'lucide-react'
 import clsx from 'clsx'
