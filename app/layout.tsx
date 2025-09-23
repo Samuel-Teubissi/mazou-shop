@@ -11,6 +11,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@heroui/navbar'
 import { Modal } from '@/components/componentModal'
 import Image from 'next/image'
 import { MazouFooter } from '@/components/MazouFooter'
+import { ButtonDarkMode } from '@/components/ButtonDarkMode'
 
 export const metadata: Metadata = {
   title: {
@@ -49,7 +50,8 @@ export default function RootLayout({
                   <span className="mr-4">LOGO</span>
                   <p className="font-bold hidden md:block">Mazou Shop</p>
                 </div>
-                <div className="">
+                <div className="flex gap-1 items-center">
+                  <ButtonDarkMode />
                   <Modal />
                 </div>
               </div>
