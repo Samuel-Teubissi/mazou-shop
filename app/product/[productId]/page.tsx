@@ -2,14 +2,6 @@ import ImageSlider from '@/components/ImageSlider'
 import { Card, CardBody } from '@heroui/card'
 import { Breadcrumbs, BreadcrumbItem } from '@heroui/breadcrumbs'
 import Produits from '../../dataMazou.json'
-import {
-  Table,
-  TableHeader,
-  TableBody,
-  TableColumn,
-  TableRow,
-  TableCell,
-} from '@heroui/table'
 import WhatsAppButton from '@/components/WhatsappButton'
 import { marked } from 'marked'
 import { Button } from '@heroui/button'
@@ -28,8 +20,12 @@ export default async function Page(props: {
   )
   return (
     <>
-      <div className="p-3 text-small text-gray-700 max-w-6xl mx-auto w-full">
-        <Link href="/" title="Mazou Homepage">
+      <div className="text-small text-gray-700 py-3 mx-10 mz_container-body">
+        <Link
+          href="/"
+          title="Mazou Homepage"
+          className="hover:text-brand-primary-400"
+        >
           {'<'} Retourner à l'accceuil
         </Link>
       </div>

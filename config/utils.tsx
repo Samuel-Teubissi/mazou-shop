@@ -10,7 +10,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function formatPrice(valuePrice: string) {
+export function formatPrice(valuePrice: string | number) {
   const newFormat = Number(valuePrice)
   // return newFormat.toLocaleString('fr-FR', {
   //   style: 'currency',

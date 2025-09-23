@@ -56,7 +56,7 @@ export default function ImageSlider() {
       }
     >
       {[...Array(3)].map((_, i) => (
-        <div key={i}>
+        <div key={i} className="flex justify-center">
           <Image
             isZoomed
             as={NextImage}
