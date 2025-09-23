@@ -39,8 +39,10 @@ export const ButtonDarkMode = () => {
         <MoonIcon className="inline dark:hidden" />
         <SunIcon className="hidden dark:inline" />
       </label>
-      <span className="inline dark:hidden">Dark Mode</span>
-      <span className="hidden dark:inline">Light Mode</span>
+      <label htmlFor="switchDark" className="min-w-fit">
+        <span className="inline dark:hidden">Dark Mode</span>
+        <span className="hidden dark:inline">Light Mode</span>
+      </label>
     </div>
   )
 }

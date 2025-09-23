@@ -24,7 +24,7 @@ interface Product {
 export default function MazouCard(props: { Item: Product }) {
   const item = props.Item
   return (
-    <div className="w-full border border-transparent mz_trans hover:border-brand-primary-400/50 shadow-small rounded-large text-foreground relative">
+    <div className="w-full border border-transparent mz_trans hover:border-brand-primary-400/50 shadow-small rounded-large text-foreground relative dark:bg-dark-div">
       <div className="absolute flex flex-col top-1/3 -left-2 gap-1 font-bold text-lg z-10">
         <span className="line-through mz_priceBand bg-gray-400/75 text-medium">
           {formatPrice(item.old_price)} F
@@ -45,7 +45,7 @@ export default function MazouCard(props: { Item: Product }) {
         />
       </div>
       <div className="items-center flex flex-col px-2 py-2 md:px-3 w-full">
-        <div className="py-5 md:px-2 font-bold text-center">
+        <div className="py-5 md:px-2 font-bold text-center dark:text-dark-text">
           <Link
             href={'/product/' + item.id + '?categorie=' + item.product_category}
             className="text-inherit"

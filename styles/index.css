@@ -57,17 +57,18 @@ body {
   /* width: fit-content; */
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 4px;
+  /* gap: 1.5rem; */
 }
 
 .switchDark label {
-  background-color: var(--color_text);
-  width: 3rem;
-  height: 1.5rem;
-  border-radius: 2rem;
+  /* background-color: var(--color_text); */
+  /* width: 3rem; */
+  /* height: 1.5rem; */
+  /* border-radius: 2rem; */
   display: flex;
   align-items: center;
-  border: 0.15rem solid var(--bg-app-800);
+  /* border: 0.15rem solid var(--bg-app-800); */
   position: relative;
   box-sizing: content-box;
   cursor: pointer;
@@ -82,6 +83,6 @@ body {
   transition: transform 0.3s;
 }
 
-.switchDark input:checked + label svg {
+/* .switchDark input:checked + label svg {
   transform: translate(1.5rem);
-}
+} */
