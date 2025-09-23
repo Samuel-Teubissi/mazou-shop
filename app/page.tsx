@@ -37,7 +37,7 @@ export default function Home() {
             {[...Array(8)].map((_, i) => (
               <div key={i}>
                 {Produits.map((item, index) => (
-                  <MazouCard item={item} key={index} />
+                  <MazouCard Item={item} key={index} />
                 ))}
               </div>
             ))}

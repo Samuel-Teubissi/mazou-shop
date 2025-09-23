@@ -1,11 +1,13 @@
 import ImageSlider from '@/components/ImageSlider'
 import { Card, CardBody } from '@heroui/card'
-import { Breadcrumbs, BreadcrumbItem } from '@heroui/breadcrumbs'
 import Produits from '../../dataMazou.json'
 import WhatsAppButton from '@/components/WhatsappButton'
 import { marked } from 'marked'
 import { Button } from '@heroui/button'
 import Link from 'next/link'
+// import Typography from '@mui/material/Typography'
+// import Breadcrumbs from '@mui/material/Breadcrumbs'
+// import Link from '@mui/material/Link'
 
 export default async function Page(props: {
   params: Promise<{ productId: string }>
@@ -20,7 +22,7 @@ export default async function Page(props: {
   )
   return (
     <>
-      <div className="text-small text-gray-700 py-3 mx-10 mz_container-body">
+      <div className="text-small text-gray-700 py-3 max-w-7xl mx-auto md:px-6 box-border">
         <Link
           href="/"
           title="Mazou Homepage"
@@ -28,14 +30,21 @@ export default async function Page(props: {
         >
           {'<'} Retourner à l'accceuil
         </Link>
+        {/* <Breadcrumbs separator="›" aria-label="breadcrumb">
+          <Link underline="hover" color="inherit" href="/">
+            Home
+          </Link>
+          <Link
+            underline="hover"
+            color="inherit"
+            href="/material-ui/getting-started/installation/"
+          >
+            {searchParams.categorie}
+          </Link>
+          <Typography sx={{ color: 'text.primary' }}>Product</Typography>
+        </Breadcrumbs> */}
       </div>
       <div className="mz_container">
-        <Breadcrumbs>
-          waouh
-          <BreadcrumbItem>Home</BreadcrumbItem>
-          <BreadcrumbItem>{searchParams.categorie}</BreadcrumbItem>
-          <BreadcrumbItem>Product</BreadcrumbItem>
-        </Breadcrumbs>
         <div className="mz_container-body lg:w-5xl xl:w-6xl space-y-4">
           <div className="bg-white p-5 pt-7 uppercase text-xl font-bold">
             {product.title}

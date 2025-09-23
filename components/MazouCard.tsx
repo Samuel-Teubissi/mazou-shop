@@ -4,7 +4,23 @@ import Produits from '../app/dataMazou.json'
 import { Link } from '@heroui/link'
 import { mz_button as buttonStyles } from '@/components/primitives'
 
-export default function MazouCard({ item }: any) {
+interface Product {
+  id: number
+  title: string
+  img: string[]
+  new_price: string
+  old_price: string
+  product_category: string
+  product_note: string
+  testimonial: string
+  description: string
+  product_profits: string[]
+  product_tags: string[]
+  product_caracteristics: string[]
+}
+
+export default function MazouCard(props: { Item: Product }) {
+  const item = props.Item
   return (
     <div className="w-full border border-transparent mz_trans hover:border-brand-primary-400/50 shadow-small rounded-large text-foreground relative">
       <div className="absolute flex flex-col top-1/3 -left-2 gap-1 font-bold text-lg z-10">
