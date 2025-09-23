@@ -1,5 +1,13 @@
+@font-face {
+  font-family: Chivo;
+  src: url('./fonts/Chivo-VariableFont.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:
+    'Chivo', 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url('/images/background.png') center/cover no-repeat;
   /* background-color: rgb(0, 0, 0, 0.5); */
   /* background-size: cover;

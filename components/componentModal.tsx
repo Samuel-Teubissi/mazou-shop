@@ -56,32 +56,32 @@ export const Modal = () => {
                   {[...Array(3)].map((_, i) => (
                     <div
                       key={i}
-                      className="flex gap-2 py-3 border-b-2 border-gray-300 "
+                      className="flex gap-2 py-3 border-b-2 border-gray-300 last:border-transparent"
                     >
                       <div className="hidden md:flex items-center px-2 font-bold">
                         {i + 1}
                       </div>
                       <div className="min-h-[100px] w-auto flex justify-center basis-40 rounded-md overflow-hidden">
-                        <img
+                        {/* <img
                           src={product.img[i]}
                           alt={product.title}
                           width={158}
                           height={158}
-                        />
-                        {/* <Image
-                          alt={product.title}
-                          src={product.img[i]}
-                          width={158}
-                          height={158}
-                          className="w-full h-full"
                         /> */}
+                        <Image
+                          alt={product.title}
+                          src={product.img[i]}
+                          width={158}
+                          height={158}
+                          // className="w-full h-full"
+                        />
                       </div>
                       <div className="flex flex-col justify-between gap-1 flex-1">
                         <div className="flex flex-col gap-1">
                           <div className="font-bold text-lg">
                             {product.title}
                           </div>
-                          <div className="text-small text-gray-700 flex gap-1 flex-wrap line-clamp-2">
+                          <div className="text-small text-gray-700 flex gap-2 flex-wrap line-clamp-2">
                             {product.product_tags.slice(0, 2).map((tag, i) => (
                               <span
                                 key={i}

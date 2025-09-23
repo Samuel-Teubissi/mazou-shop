@@ -22,7 +22,7 @@ export default async function Page(props: {
   )
   return (
     <>
-      <div className="text-small text-gray-700 py-3 max-w-7xl mx-auto md:px-6 box-border">
+      <div className="text-small text-gray-700 py-3 px-6 max-w-6xl mx-auto box-border">
         <Link
           href="/"
           title="Mazou Homepage"

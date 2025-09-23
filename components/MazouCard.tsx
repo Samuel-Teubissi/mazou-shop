@@ -3,6 +3,8 @@ import { cn, formatPrice } from '@/config/utils'
 import Produits from '../app/dataMazou.json'
 import { Link } from '@heroui/link'
 import { mz_button as buttonStyles } from '@/components/primitives'
+import { Button } from '@heroui/button'
+import { ShoppingCart } from 'lucide-react'
 
 interface Product {
   id: number
@@ -43,10 +45,21 @@ export default function MazouCard(props: { Item: Product }) {
         />
       </div>
       <div className="items-center flex flex-col px-2 py-2 md:px-3 w-full">
-        <div className="pt-3 pb-5 md:px-2 font-bold text-center">
-          <span className="line-clamp-2">{item.title}</span>
+        <div className="py-5 md:px-2 font-bold text-center">
+          <Link
+            href={'/product/' + item.id + '?categorie=' + item.product_category}
+            className="text-inherit"
+          >
+            <span className="line-clamp-2">{item.title}</span>
+          </Link>
         </div>
-        <Link
+        <div className="flex justify-center">
+          <Button className="bg-white/50" variant="bordered">
+            <ShoppingCart size={15} />
+            <span>Ajouter au panier</span>
+          </Button>
+        </div>
+        {/* <Link
           href={'/product/' + item.id + '?categorie=' + item.product_category}
           className={cn(
             buttonStyles({ hoverText: 'primary' }),
@@ -54,7 +67,7 @@ export default function MazouCard(props: { Item: Product }) {
           )}
         >
           Voir les détails
-        </Link>
+        </Link> */}
       </div>
     </div>
   )

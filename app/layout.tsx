@@ -43,21 +43,18 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
           <div className="relative flex flex-col h-screen">
-            <Navbar
-              className="bg-white/30 backdrop-blur-xl text-brand-primary-400"
-              position="static"
-            >
-              <NavbarBrand>
-                <span className="mr-4">LOGO</span>
-                <p className="font-bold hidden md:block">Mazou Shop</p>
-              </NavbarBrand>
-              <NavbarContent justify="end">
-                <NavbarItem>
+            <header className="bg-white/30 backdrop-blur-xl text-brand-primary-400 fixed py-3 w-full z-50">
+              <div className="flex items-center justify-between max-w-6xl px-6 mx-auto">
+                <div className="flex items-center">
+                  <span className="mr-4">LOGO</span>
+                  <p className="font-bold hidden md:block">Mazou Shop</p>
+                </div>
+                <div className="">
                   <Modal />
-                </NavbarItem>
-              </NavbarContent>
-            </Navbar>
-            <main className="lg:mt-16 flex-grow">{children}</main>
+                </div>
+              </div>
+            </header>
+            <main className="lg:mt-28 flex-1">{children}</main>
             <MazouFooter />
           </div>
         </Providers>
