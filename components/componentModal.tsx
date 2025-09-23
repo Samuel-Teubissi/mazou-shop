@@ -48,7 +48,7 @@ export const Modal = () => {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 mz_Heading border-b-2 px-0 ml-4">
+              <ModalHeader className="flex flex-col gap-1 mz_Heading border-b-2 px-0 ml-6">
                 Votre Panier
               </ModalHeader>
               <ModalBody>
@@ -74,9 +74,9 @@ export const Modal = () => {
                           className="w-full h-full"
                         /> */}
                       </div>
-                      <div className="flex flex-col justify-between gap-4">
-                        <div>
-                          <div className="">{product.title}</div>
+                      <div className="flex flex-col justify-between">
+                        <div className="flex flex-col gap-1">
+                          <div className="font-bold">{product.title}</div>
                           <div className="text-small text-gray-700 space-x-2">
                             {product.product_tags.map((tag, i) => (
                               <span
@@ -99,7 +99,7 @@ export const Modal = () => {
                   ))}
                 </div>
               </ModalBody>
-              <ModalFooter className="gap-10">
+              <ModalFooter className="gap-10 border-t border-gray-300">
                 <div className="border-b-2 border-brand-primary-500 flex items-center px-4 py-1 gap-2">
                   <span>TOTAL:</span>
                   <span className="text-2xl font-bold">
