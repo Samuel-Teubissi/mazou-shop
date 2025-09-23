@@ -25,7 +25,7 @@ export const SearchInput = () => {
         <input
           type="search"
           name="mzs_search"
-          className="w-full py-2 px-4 border-none outline-none"
+          className="w-full py-2 px-4 border-none outline-none text-black/90"
           placeholder="Rechercher un article"
         />
         <button
@@ -55,7 +55,7 @@ export const SearchInput = () => {
                 hoverBkg: true,
                 border: true,
               }),
-              'px-4 py-2 bg-white/50',
+              'px-4 py-2 bg-white/50 mz_dark-btn',
             )}
           >
             {link}

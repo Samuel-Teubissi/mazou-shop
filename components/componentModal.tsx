@@ -32,7 +32,7 @@ export const Modal = () => {
             hoverBkg: true,
             border: true,
           }),
-          'min-w-auto bg-white/50',
+          'min-w-auto bg-white/50 mz_dark-btn',
         )}
         startContent={<ShoppingCart className="w-4 h-4" />}
         onPress={() => onOpen()}
@@ -56,7 +56,7 @@ export const Modal = () => {
                   {[...Array(3)].map((_, i) => (
                     <div
                       key={i}
-                      className="flex gap-2 py-3 border-b-2 border-gray-300 last:border-transparent"
+                      className="flex gap-2 py-3 border-b-2 border-gray-300 dark:border-gray-700 last:border-transparent dark:last:border-transparent"
                     >
                       <div className="hidden md:flex items-center px-2 font-bold">
                         {i + 1}
@@ -81,7 +81,7 @@ export const Modal = () => {
                           <div className="font-bold text-lg">
                             {product.title}
                           </div>
-                          <div className="text-small text-gray-700 flex gap-2 flex-wrap line-clamp-2">
+                          <div className="text-small text-gray-700 dark:text-gray-400 flex gap-2 flex-wrap line-clamp-2">
                             {product.product_tags.slice(0, 2).map((tag, i) => (
                               <span
                                 key={i}
@@ -93,10 +93,10 @@ export const Modal = () => {
                           </div>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-2xl sm:text-3xl font-bold text-brand-primary-500 min-w-fit">
+                          <span className="text-2xl sm:text-3xl font-bold text-brand-primary-500 dark:text-brand-primary-400 min-w-fit">
                             {formatPrice(product.new_price)} F
                           </span>
-                          <div className="flex items-center gap-1 min-w-fit text-gray-700 hover:text-brand-primary-400">
+                          <div className="flex items-center gap-1 min-w-fit text-gray-700 dark:text-gray-400 hover:text-brand-primary-400">
                             <Trash2Icon />
                             <span className="hidden sm:inline-block">
                               Retirer du panier
@@ -108,7 +108,7 @@ export const Modal = () => {
                   ))}
                 </div>
               </ModalBody>
-              <ModalFooter className="gap-10 border-t border-gray-300">
+              <ModalFooter className="gap-10 border-t border-gray-300 dark:border-gray-800">
                 <div className="border-b-2 border-brand-primary-500 flex items-center px-4 gap-2">
                   <span>TOTAL:</span>
                   <span className="text-2xl font-bold  min-w-fit">

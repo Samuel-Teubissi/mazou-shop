@@ -54,7 +54,7 @@ export const subtitle = tv({
 })
 
 export const mz_button = tv({
-  base: 'transition-colors duration-300 cursor-pointer active:scale-95',
+  base: 'transition-colors duration-200 cursor-pointer active:scale-95',
   variants: {
     bkg: {
       default: '',

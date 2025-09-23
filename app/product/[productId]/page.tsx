@@ -87,7 +87,7 @@ export default async function Page(props: {
               </div>
               <div className="space-y-2">
                 <h3 className="font-bold">Caractéristiques du Produit</h3>
-                <div className="border border-gray-200 w-full text-small">
+                <div className="border border-gray-200 dark:border-gray-700 w-full text-small">
                   {product.product_caracteristics.map((c, i) => (
                     <div key={i} className="odd:bg-brand-primary-400/15 p-4">
                       {c}
@@ -104,7 +104,7 @@ export default async function Page(props: {
               className="pb-10"
             />
           </div>
-          <div className="mz_container-bloc mz_description dark:text-dark-text z-50">
+          <div className="mz_container-bloc mz_description dark:text-dark-text">
             <h3>Pourquoi choisir notre produit ?</h3>
             <div>
               {product.product_tags.map((d, i) => (
