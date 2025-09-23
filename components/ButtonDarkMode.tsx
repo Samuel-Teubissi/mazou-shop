@@ -33,16 +33,19 @@ export const ButtonDarkMode = () => {
     }, 200)
   }
   return (
-    <div className="btn-trans nav-trans switchDark">
+    <div className="btn-trans nav-trans switchDark overflow-hidden text-black/90 dark:text-white">
       <input type="checkbox" onChange={handleDarkMode} id="switchDark" />
-      <label htmlFor="switchDark">
+      <label
+        htmlFor="switchDark"
+        className="border border-gray-400 rounded-lg p-1.5 bg-white/50 mz_dark-btn hover:bg-brand-primary-500 hover:text-white hover:border-gray-200"
+      >
         <MoonIcon className="inline dark:hidden" />
         <SunIcon className="hidden dark:inline" />
       </label>
-      <label htmlFor="switchDark" className="min-w-fit">
+      {/* <label htmlFor="switchDark" className="min-w-fit hidden">
         <span className="inline dark:hidden">Dark Mode</span>
         <span className="hidden dark:inline">Light Mode</span>
-      </label>
+      </label> */}
     </div>
   )
 }

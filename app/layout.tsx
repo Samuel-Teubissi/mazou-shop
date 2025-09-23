@@ -50,7 +50,7 @@ export default function RootLayout({
                   <span className="mr-4">LOGO</span>
                   <p className="font-bold hidden md:block">Mazou Shop</p>
                 </div>
-                <div className="flex gap-1 items-center">
+                <div className="flex gap-2 items-center">
                   <ButtonDarkMode />
                   <Modal />
                 </div>
