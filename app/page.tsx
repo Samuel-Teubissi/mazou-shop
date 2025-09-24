@@ -15,7 +15,7 @@ import MazouCard from '@/components/MazouCard'
 export default function Home() {
   return (
     <>
-      <section className="flex flex-col items-center justify-center box-border gap-4 py-8 px-4 md:py-10 mt-[120px] mb-7 md:mb-10">
+      <section className="flex flex-col items-center justify-center box-border gap-4 px-4 md:py-10 mt-[120px] lg:mt-[30px] mb-7 md:mb-10 flex-wrap h-auto">
         <div className="inline-block max-w-xl text-center justify-center">
           <span className={title()}>Bienvenue sur&nbsp;</span>
           <span className="bg-gradient-to-br from-[#E44E4E] to-[#831f16] bg-clip-text text-transparent text-[2.5rem]/7 lg:text-6xl tracking-tight inline font-black">
@@ -35,7 +35,7 @@ export default function Home() {
       <div className="mz_container">
         <div className="mz_container-body px-3">
           <div className="mz_Heading text-3xl border-b-5">SPORT</div>
-          <div className="container gap-3 items-center grid grid-cols-2 md:grid-cols-3">
+          <div className="container gap-3 items-center grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3">
             {[...Array(8)].map((_, i) => (
               <div key={i}>
                 {Produits.map((item, index) => (

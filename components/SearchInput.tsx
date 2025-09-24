@@ -44,7 +44,7 @@ export const SearchInput = () => {
           <SearchIcon className="w-5 h-5 text-white" />
         </button>
       </form>
-      <div className="flex gap-1 items-center justify-center mt-2 w-full flex-wrap">
+      <div className="flex gap-1 items-center justify-center mt-2 w-full flex-wrap overflow-hidden">
         {Link_navbar.map((link, index) => (
           <Button
             key={index}
