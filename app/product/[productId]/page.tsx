@@ -59,7 +59,7 @@ export default async function Page(props: {
                   {product.old_price && 'En promotion !'}
                 </span>
               </div>
-              <div className="flex flex-col sm:flex-row gap-x-4 md:items-center">
+              <div className="flex flex-col xs:flex-row lg:flex-col xl:flex-row gap-x-4 xl:items-center">
                 <span className="text-3xl font-black">
                   {product.new_price} FCFA
                 </span>

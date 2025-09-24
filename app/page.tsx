@@ -35,7 +35,7 @@ export default function Home() {
       <div className="mz_container">
         <div className="mz_container-body px-3">
           <div className="mz_Heading text-3xl border-b-5">SPORT</div>
-          <div className="container gap-3 items-center grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3">
+          <div className="w-full gap-3 items-center grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3">
             {[...Array(8)].map((_, i) => (
               <div key={i}>
                 {Produits.map((item, index) => (
