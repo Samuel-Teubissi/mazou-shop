@@ -22,7 +22,7 @@ export default async function Page(props: {
   )
   return (
     <>
-      <div className="text-small text-gray-700 py-3 px-6 max-w-6xl mx-auto box-border dark:text-dark-text mt-[80px]">
+      <div className="text-small text-gray-700 py-3 px-6 max-w-6xl mx-auto box-border dark:text-dark-text mt-[80px] lg:mt-auto">
         <Link
           href="/"
           title="Mazou Homepage"
@@ -104,7 +104,7 @@ export default async function Page(props: {
               className="pb-10"
             />
           </div>
-          <div className="mz_container-bloc mz_description dark:text-dark-text">
+          <div className="mz_container-bloc mz_description dark:text-dark-text border border-gray-200 dark:border-transparent">
             <h3>Pourquoi choisir notre produit ?</h3>
             <div>
               {product.product_tags.map((d, i) => (

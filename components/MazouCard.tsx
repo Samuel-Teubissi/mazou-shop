@@ -27,9 +27,11 @@ export default function MazouCard(props: { Item: Product }) {
     <div className="w-full border border-transparent mz_trans hover:border-brand-primary-400/50 shadow-small rounded-large text-foreground relative dark:bg-dark-div">
       <div className="absolute flex flex-col top-1/3 -left-2 gap-1 font-bold text-lg z-10">
         <span className="line-through mz_priceBand bg-gray-400/75 text-medium dark:text-black/90">
+          <span className="mz_priceBand-tip-secondary"></span>
           {formatPrice(item.old_price)} F
         </span>
         <span className="text-white mz_priceBand bg-brand-primary-400">
+          <span className="mz_priceBand-tip-primary"></span>
           {formatPrice(item.new_price)} F
         </span>
       </div>

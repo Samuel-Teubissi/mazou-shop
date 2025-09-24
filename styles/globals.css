@@ -26,7 +26,18 @@
 }
 
 .mz_priceBand {
-  @apply px-1 py-1 md:px-2 w-fit rounded-lg;
+  @apply px-1 py-1 md:px-2 w-fit rounded-lg rounded-bl-xs relative;
+}
+
+.mz_priceBand-tip-secondary,
+.mz_priceBand-tip-primary {
+  @apply before:inline-block before:border-5 before:border-transparent before:transform before:-rotate-45 before:absolute before:-bottom-1 before:left-0.5;
+}
+.mz_priceBand-tip-secondary {
+  @apply before:border-l-gray-400/75;
+}
+.mz_priceBand-tip-primary {
+  @apply before:border-l-brand-primary-400;
 }
 
 .mz_Heading {
