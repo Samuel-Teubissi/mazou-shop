@@ -30,7 +30,8 @@ export default async function Page(props: {
         >
           {'<'} Retourner à l'acceuil
         </Link>
-        {/* <Breadcrumbs separator="›" aria-label="breadcrumb">
+      </div>
+      {/* <Breadcrumbs separator="›" aria-label="breadcrumb">
           <Link underline="hover" color="inherit" href="/">
             Home
           </Link>
@@ -40,16 +41,15 @@ export default async function Page(props: {
             href="/material-ui/getting-started/installation/"
           >
             {searchParams.categorie}
-          </Link>
-          <Typography sx={{ color: 'text.primary' }}>Product</Typography>
-        </Breadcrumbs> */}
-      </div>
+            </Link>
+            <Typography sx={{ color: 'text.primary' }}>Product</Typography>
+            </Breadcrumbs> */}
       <div className="mz_container">
-        <div className="mz_container-body lg:w-5xl xl:w-6xl space-y-4">
-          <div className="bg-white dark:bg-dark-div p-5 pt-7 uppercase text-xl font-bold">
+        <div className="mz_container-body mz_container-resp">
+          <div className="mz_container-bloc p-5 pt-7 uppercase text-xl font-bold">
             {product.title}
           </div>
-          <div className="bg-white dark:bg-dark-div lg:p-5 space-y-2 flex flex-col lg:flex-row gap-4">
+          <div className="mz_container-bloc space-y-2 flex flex-col lg:flex-row gap-4">
             <div className="w-full md:w-[500] h-[500] flex items-center bg-brand-primary-500/10 mx-auto">
               <ImageSlider />
             </div>

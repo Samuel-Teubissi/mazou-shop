@@ -14,18 +14,32 @@ export const ButtonDarkMode = () => {
     } else {
       document.documentElement.classList.remove('dark')
     }
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.target instanceof HTMLLabelElement && event.key === 'Enter') {
-        const target = event.target as HTMLLabelElement
-        if (target.htmlFor) {
-          const assiociatedElement = document.getElementById(target.htmlFor)
-          assiociatedElement?.click()
+    // const handleKeyDown = (event: KeyboardEvent) => {
+    //   if (event.target instanceof HTMLLabelElement && event.key === 'Enter') {
+    //     const target = event.target as HTMLLabelElement
+    //     if (target.htmlFor) {
+    //       const assiociatedElement = document.getElementById(target.htmlFor)
+    //       assiociatedElement?.click()
+    //     }
+    //   }
+    // }
+    // document.addEventListener('keydown', handleKeyDown)
+    // return () => {
+    //   document.removeEventListener('keydown', handleKeyDown)
+    // }
+    const darkModeLabel = document.querySelector(
+      'label[for="switchDark"]',
+    ) as HTMLLabelElement
+    if (darkModeLabel) {
+      const handleLabelDark = (event: KeyboardEvent): void => {
+        if (event.key === 'Enter') {
+          document.getElementById('switchDark')?.click()
         }
       }
-    }
-    document.addEventListener('keydown', handleKeyDown)
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown)
+      darkModeLabel.addEventListener('keydown', handleLabelDark)
+      return () => {
+        darkModeLabel.removeEventListener('keydown', handleLabelDark)
+      }
     }
   }, [])
   const setThemeApp = (theme: string) => {
@@ -51,7 +65,7 @@ export const ButtonDarkMode = () => {
         htmlFor="switchDark"
         className="border border-gray-400 rounded-lg p-1.5 bg-white/50 mz_dark-btn hover:bg-brand-primary-500 hover:text-white focus:text-white hover:border-gray-200 mz_trans focus:bg-brand-primary-500"
         aria-label="Thème du site"
-        role="link"
+        role="button"
         tabIndex={0}
       >
         <MoonIcon className="inline dark:hidden" />

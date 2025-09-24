@@ -32,7 +32,7 @@ export const Modal = () => {
             hoverBkg: true,
             border: true,
           }),
-          'min-w-auto bg-white/50 mz_dark-btn dark:text-white',
+          'min-w-auto mz_dark-btn rounded-lg',
         )}
         startContent={<ShoppingCart className="w-4 h-4" />}
         onPress={() => onOpen()}
@@ -49,7 +49,7 @@ export const Modal = () => {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 mz_Heading border-b-2 px-0 ml-4 dark:bg-dark-div">
+              <ModalHeader className="flex flex-col gap-1 mz_Heading px-0 ml-4 dark:bg-dark-div">
                 Votre Panier
               </ModalHeader>
               <ModalBody>
@@ -97,7 +97,7 @@ export const Modal = () => {
                           <span className="text-2xl sm:text-3xl font-bold text-brand-primary-500 dark:text-brand-primary-400 min-w-fit">
                             {formatPrice(product.new_price)} F
                           </span>
-                          <div className="flex items-center gap-1 min-w-fit text-gray-700 dark:text-gray-400 hover:text-brand-primary-400">
+                          <div className="flex items-center gap-1 min-w-fit text-gray-700 hover:text-brand-primary-400 dark:text-gray-400 dark:hover:text-brand-primary-400">
                             <Trash2Icon />
                             <span className="hidden sm:inline-block">
                               Retirer du panier
@@ -116,7 +116,11 @@ export const Modal = () => {
                     {formatPrice(Number(product.new_price) * 3)} F
                   </span>
                 </div>
-                <Button color="primary" onPress={onClose}>
+                <Button
+                  className="bg-brand-primary-500 hover:bg-brand-primary-400 uppercase font-bold text-white"
+                  onPress={onClose}
+                  size="lg"
+                >
                   Commander
                 </Button>
               </ModalFooter>
