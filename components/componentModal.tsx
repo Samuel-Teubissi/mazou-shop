@@ -32,7 +32,7 @@ export const Modal = () => {
             hoverBkg: true,
             border: true,
           }),
-          'min-w-auto bg-white/50 mz_dark-btn',
+          'min-w-auto bg-white/50 mz_dark-btn dark:text-white',
         )}
         startContent={<ShoppingCart className="w-4 h-4" />}
         onPress={() => onOpen()}
@@ -44,11 +44,12 @@ export const Modal = () => {
         size="4xl"
         onClose={onClose}
         scrollBehavior="inside"
+        className="dark:bg-dark-div"
       >
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 mz_Heading border-b-2 px-0 ml-4">
+              <ModalHeader className="flex flex-col gap-1 mz_Heading border-b-2 px-0 ml-4 dark:bg-dark-div">
                 Votre Panier
               </ModalHeader>
               <ModalBody>

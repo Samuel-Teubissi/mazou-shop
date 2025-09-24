@@ -38,7 +38,7 @@ export const SearchInput = () => {
               border: false,
               radius: 'small',
             }),
-            'px-4 h-10 box-border flex justify-center items-center hover:bg-brand-primary-400 focus:bg-brand-primary-400',
+            'px-4 h-10 box-border flex justify-center items-center hover:bg-brand-primary-400',
           )}
         >
           <SearchIcon className="w-5 h-5 text-white" />
@@ -55,7 +55,7 @@ export const SearchInput = () => {
                 hoverBkg: true,
                 border: true,
               }),
-              'px-4 py-2 bg-white/50 mz_dark-btn',
+              'px-4 py-2 bg-white/50 mz_dark-btn dark:text-white',
             )}
           >
             {link}

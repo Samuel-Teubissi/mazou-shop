@@ -22,7 +22,7 @@ export default async function Page(props: {
   )
   return (
     <>
-      <div className="text-small text-gray-700 py-3 px-6 max-w-6xl mx-auto box-border dark:text-dark-text">
+      <div className="text-small text-gray-700 py-3 px-6 max-w-6xl mx-auto box-border dark:text-dark-text mt-[80px]">
         <Link
           href="/"
           title="Mazou Homepage"
@@ -126,13 +126,13 @@ export default async function Page(props: {
                     width="40"
                     height="38"
                     viewBox="0 0 52 49"
-                    fill="none"
+                    // fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="text-inherit"
+                    className="mz_svg"
                   >
                     <path
                       d="M10.3545 48.7469L14.484 30.9464L0.663086 18.9639L18.9011 17.3961L26 0.605103L33.099 17.3961L51.337 18.9639L37.516 30.9464L41.6455 48.7469L26 39.2972L10.3545 48.7469Z"
-                      fill="#841515"
+                      // fill="#841515"
                     />
                   </svg>
                 </span>
@@ -146,7 +146,7 @@ export default async function Page(props: {
               <div>
                 <Button
                   variant="bordered"
-                  className="dark:text-dark-text dark:hover:bg-white/15"
+                  className="dark:text-dark-text dark:hover:bg-white/15 hover:bg-brand-primary-500/5"
                 >
                   Donner votre avis
                 </Button>

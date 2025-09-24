@@ -1,8 +1,8 @@
 import { heroui } from '@heroui/theme'
-import lineClamp from '@tailwindcss/line-clamp'
 
 /** @type {import('tailwindcss').Config} */
 const config = {
+  darkMode: 'class',
   content: [
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -29,7 +29,6 @@ const config = {
       },
     },
   },
-  darkMode: 'class',
   plugins: [heroui()],
 }
 

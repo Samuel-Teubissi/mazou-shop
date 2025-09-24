@@ -4,7 +4,7 @@ import Produits from '../app/dataMazou.json'
 import { Link } from '@heroui/link'
 import { mz_button as buttonStyles } from '@/components/primitives'
 import { Button } from '@heroui/button'
-import { ShoppingCart } from 'lucide-react'
+import { EyeIcon, ShoppingBagIcon, ShoppingCart } from 'lucide-react'
 
 interface Product {
   id: number
@@ -53,11 +53,23 @@ export default function MazouCard(props: { Item: Product }) {
             <span className="line-clamp-2">{item.title}</span>
           </Link>
         </div>
-        <div className="flex justify-center">
-          <Button className="bg-white/50 mz_dark-btn" variant="bordered">
-            <ShoppingCart size={15} />
-            <span>Ajouter au panier</span>
+        <div className="flex justify-center items-center gap-1 px-4 w-full">
+          <Button
+            className="bg-white/50 mz_dark-btn hover:bg-brand-primary-500/5 dark:text-white w-full sm:w-auto flex-1"
+            variant="bordered"
+          >
+            <ShoppingBagIcon size={15} />
+            <span className="sm:inline hidden">Ajouter au panier</span>
           </Button>
+          {/* <Button
+            as={Link}
+            variant="bordered"
+            href={'/product/' + item.id + '?categorie=' + item.product_category}
+            className="bg-white/50 mz_dark-btn hover:bg-brand-primary-500/5 dark:text-white"
+          >
+            <EyeIcon size={15} />
+            <span className="sm:inline hidden">Voir les détails</span>
+          </Button> */}
         </div>
         {/* <Link
           href={'/product/' + item.id + '?categorie=' + item.product_category}

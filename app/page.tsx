@@ -15,10 +15,12 @@ import MazouCard from '@/components/MazouCard'
 export default function Home() {
   return (
     <>
-      <section className="flex flex-col items-center justify-center box-border gap-4 py-8 px-4 md:py-10 mb-7 md:mb-10">
+      <section className="flex flex-col items-center justify-center box-border gap-4 py-8 px-4 md:py-10 mt-[120px] mb-7 md:mb-10">
         <div className="inline-block max-w-xl text-center justify-center">
           <span className={title()}>Bienvenue sur&nbsp;</span>
-          <span className={title({ color: 'red' })}>Mazou&nbsp;</span>
+          <span className="bg-gradient-to-br from-[#E44E4E] to-[#831f16] bg-clip-text text-transparent text-[2.5rem]/7 lg:text-6xl tracking-tight inline font-black">
+            Mazou&nbsp;
+          </span>
         </div>
         <div className="flex gap-3 text-center px-4 lg:max-w-4xl">
           Plongez dans notre liste d’articles, sélectionnez ceux qui vous

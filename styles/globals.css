@@ -38,7 +38,7 @@
 }
 
 .mz_dark-btn {
-  @apply dark:bg-white/5 dark:hover:border-brand-primary-400 dark:hover:bg-brand-primary-500/30 focus:bg-brand-primary-500/30;
+  @apply dark:bg-white/5 dark:hover:border-brand-primary-400 dark:hover:bg-brand-primary-500/30;
 }
 
 @config "../tailwind.config.js";
