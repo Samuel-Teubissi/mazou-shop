@@ -50,7 +50,7 @@ export default async function Page(props: {
           <div className="mz_container-bloc p-5 pt-7 uppercase text-xl font-bold">
             {product.title}
           </div>
-          <div className="mz_container-bloc space-y-2 flex flex-col lg:flex-row gap-4">
+          <div className="bg-white dark:bg-dark-div dark:text-dark-text md:p-5 space-y-2 flex flex-col lg:flex-row gap-4">
             <div className="w-full md:w-[500] h-[500] flex items-center bg-brand-primary-500/10 mx-auto">
               <ImageSlider />
             </div>

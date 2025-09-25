@@ -24,8 +24,9 @@ export default function Home() {
         </div>
         <div className="flex gap-3 text-center px-4 lg:max-w-4xl">
           Plongez dans notre liste d’articles, sélectionnez ceux qui vous
-          interresse et passez la commande, TOUT SIMPLEMENT Vous serez redirigé
-          sur whatsapp pour discuter avec le fournisseur sur la livraison.
+          interresse et passez la commande, TOUT SIMPLEMENT ! Vous serez
+          redirigé sur whatsapp pour discuter avec le fournisseur sur la
+          livraison.
         </div>
         <div className="mt-7">
           <SearchInput />

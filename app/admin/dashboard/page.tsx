@@ -61,7 +61,7 @@ export default function BlogPage() {
                   defaultSelected
                   isSelected={discountChecked}
                   onValueChange={setDiscountChecked}
-                  className={customCheckbox()}
+                  // className="dark:text-white"
                 >
                   Réduction de prix
                 </Checkbox>

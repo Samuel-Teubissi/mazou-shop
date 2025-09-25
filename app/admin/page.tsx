@@ -10,6 +10,21 @@ import { useState } from 'react'
 export default function BlogPage() {
   const [isVisible, setIsVisible] = useState(false)
   const toggleVisibility = () => setIsVisible(!isVisible)
+  const hideButton = (
+    <button
+      aria-label="Changer la visibilité du mot de passe"
+      className="focus:outline-solid outline-transparent focus:ring-blue-500 rounded-lg p-1 in-focus-visible:ring-0"
+      type="button"
+      onClick={toggleVisibility}
+    >
+      {isVisible ? (
+        <EyeOff className="text-2xl text-default-400 pointer-events-none" />
+      ) : (
+        <Eye className="text-2xl text-default-400 pointer-events-none" />
+      )}
+    </button>
+  )
+
   return (
     <>
       <div className="text-small text-gray-700 py-3 px-6 max-w-6xl mx-auto box-border dark:text-dark-text mt-[80px] lg:mt-auto">
@@ -35,36 +50,14 @@ export default function BlogPage() {
                   size="lg"
                   name="title"
                 />
-                {/* <Input
-                  type="password"
-                  isRequired
-                  label="Mot de passe"
-                  size="lg"
-                  name="title"
-                /> */}
                 <Input
                   className=""
-                  endContent={
-                    <button
-                      aria-label="toggle password visibility"
-                      className="focus:outline-solid outline-transparent"
-                      type="button"
-                      onClick={toggleVisibility}
-                    >
-                      {isVisible ? (
-                        <EyeOff className="text-2xl text-default-400 pointer-events-none" />
-                      ) : (
-                        <Eye className="text-2xl text-default-400 pointer-events-none" />
-                      )}
-                    </button>
-                  }
+                  endContent={hideButton}
                   label="Mot de Passe"
-                  // placeholder="Enter your password"
                   type={isVisible ? 'text' : 'password'}
                   size="lg"
                   name="password"
                   isRequired
-                  // variant="bordered"
                 />
                 <div className="mt-10">
                   <Button type="submit" className="mz_btn-submit" size="lg">
