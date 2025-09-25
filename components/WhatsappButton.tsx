@@ -5,7 +5,8 @@ import React from 'react'
 import { addToast, ToastProvider } from '@heroui/toast'
 
 export default function WhatsAppButton({ message = 'Bonjour !' }) {
-  const phone = '237612345678'
+  const mz_Phone = process.env.MAZOU_PHONE || '696771089'
+  const phone = '237' + mz_Phone
   const waAppUrl = `whatsapp://send?phone=${phone}&text=${encodeURIComponent(message)}`
   const waWebUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 
@@ -36,7 +37,7 @@ export default function WhatsAppButton({ message = 'Bonjour !' }) {
       className="mz_trans w-full inline-flex justify-center items-center gap-4 p-3 active:scale-95 rounded-xl bg-green-600 text-white hover:bg-green-700"
       aria-label="Contacter sur WhatsApp"
     >
-      Commander sur WhatsApp
+      Commander sur WhatsApp ({mz_Phone})
       <img src="/images/whatsapp-icon.svg" alt="Logo Whatsapp" />
     </Link>
   )

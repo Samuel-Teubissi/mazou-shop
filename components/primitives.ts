@@ -41,6 +41,17 @@ export const title = tv({
   ],
 })
 
+export const customCheckbox = tv({
+  variants: {
+    isSelected: {
+      true: {
+        base: 'border-brand-primary-500 bg-brand-primary-500 hover:bg-primary-500 hover:border-primary-500',
+        // content: 'text-primary-foreground pl-1',
+      },
+    },
+  },
+})
+
 export const subtitle = tv({
   base: 'w-full md:w-1/2 my-2 text-lg lg:text-xl text-default-600 block max-w-full',
   variants: {

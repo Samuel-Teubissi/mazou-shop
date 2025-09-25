@@ -27,7 +27,7 @@ const config = {
           div: '#2B2B2B',
           div2: '#4A4A4A',
           text: '#FFF',
-          btn: '#333',
+          btn: '#27272a',
         },
       },
     },

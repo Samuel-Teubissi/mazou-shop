@@ -5,6 +5,7 @@ import WhatsAppButton from '@/components/WhatsappButton'
 import { marked } from 'marked'
 import { Button } from '@heroui/button'
 import Link from 'next/link'
+import { formatPrice } from '@/config/utils'
 // import Typography from '@mui/material/Typography'
 // import Breadcrumbs from '@mui/material/Breadcrumbs'
 // import Link from '@mui/material/Link'
@@ -61,11 +62,11 @@ export default async function Page(props: {
               </div>
               <div className="flex flex-col xs:flex-row lg:flex-col xl:flex-row gap-x-4 xl:items-center">
                 <span className="text-3xl font-black">
-                  {product.new_price} FCFA
+                  {formatPrice(product.new_price)} FCFA
                 </span>
                 <div className="flex gap-2 items-center">
                   <span className="line-through text-lg text-gray-700 dark:text-gray-300 order-2 sm:order-1">
-                    {product.old_price} F
+                    {formatPrice(product.old_price)} F
                   </span>
                   <span className="mz_promotionBand order-1 sm:order-2">
                     -{promo}%

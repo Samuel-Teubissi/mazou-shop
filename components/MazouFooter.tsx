@@ -1,6 +1,8 @@
+import { formatPrice } from '@/config/utils'
 import { Link } from '@heroui/link'
 
 export const MazouFooter = () => {
+  const mz_Phone = formatPrice(Number(process.env.MAZOU_PHONE))
   return (
     <footer className="bg-[#111] text-white">
       <div className="max-w-7xl mx-auto w-full flex flex-col justify-center py-3 px-5 lg:px-20 pt-14 pb-28 gap-4">
@@ -27,7 +29,7 @@ export const MazouFooter = () => {
             </div>
             <Link className="flex items-center gap-1">
               <img src="/images/whatsapp-icon.svg" alt="Logo Whatsapp" />
-              677 677 054
+              {mz_Phone}
             </Link>
           </div>
           <div className="flex flex-col">

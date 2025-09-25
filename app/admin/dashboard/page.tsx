@@ -1,17 +1,19 @@
 'use client'
 
-import { title } from '@/components/primitives'
+import { customCheckbox, title } from '@/components/primitives'
 import { Button } from '@heroui/button'
 import { Input, Textarea } from '@heroui/input'
+import { Checkbox } from '@heroui/checkbox'
 import { PlusIcon } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
+import { cn } from '@/config/utils'
 
 export default function BlogPage() {
   const [discountChecked, setDiscountChecked] = useState(false)
-  const handleDiscount = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setDiscountChecked(event.target.checked)
-  }
+  // const handleDiscount = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setDiscountChecked(event.target.checked)
+  // }
   return (
     <>
       <div className="text-small text-gray-700 py-3 px-6 max-w-6xl mx-auto box-border dark:text-dark-text mt-[80px] lg:mt-auto">
@@ -30,7 +32,7 @@ export default function BlogPage() {
           </div>
           <div className="mz_container-bloc">
             <h3 className="mz_Heading">Ajouter un article</h3>
-            <form action="" method="post" className="space-y-2">
+            <form action="/api/article" method="post" className="space-y-2">
               <Input
                 type="text"
                 isRequired
@@ -44,27 +46,35 @@ export default function BlogPage() {
                 isRequired
                 label="Prix"
                 size="lg"
-                name="title"
+                name="price"
                 step={100}
               />
-              <div className="space-x-2">
-                <input
+              <div className="mx-4 flex flex-col gap-1">
+                {/* <input
                   type="checkbox"
                   id="priceDiscount"
                   onChange={handleDiscount}
                   checked={discountChecked}
                 />
-                <label htmlFor="priceDiscount">Réduction de prix</label>
+                <label htmlFor="priceDiscount">Réduction de prix</label> */}
+                <Checkbox
+                  defaultSelected
+                  isSelected={discountChecked}
+                  onValueChange={setDiscountChecked}
+                  className={customCheckbox()}
+                >
+                  Réduction de prix
+                </Checkbox>
+                <Input
+                  type="number"
+                  isRequired
+                  label="Prix Avant Réduction"
+                  size="lg"
+                  name="title"
+                  step={100}
+                  isDisabled={!discountChecked}
+                />
               </div>
-              <Input
-                type="number"
-                isRequired
-                label="Prix Avant Réduction"
-                size="lg"
-                name="title"
-                step={100}
-                isDisabled={!discountChecked}
-              />
               <Textarea rows={10} label="Description" size="lg"></Textarea>
               <Input
                 type="number"
@@ -82,7 +92,7 @@ export default function BlogPage() {
                 size="lg"
                 name="title"
               />
-              <hr className="bg-brand-primary-500" />
+              <hr className="my-6" />
               <Input
                 type="text"
                 label="Tags du produit"
@@ -95,7 +105,7 @@ export default function BlogPage() {
                 size="lg"
                 name="title"
               />
-              <hr className="bg-brand-primary-500" />
+              <hr className="my-6" />
               <Input
                 type="text"
                 label="Caractéristique de produit"
@@ -110,6 +120,13 @@ export default function BlogPage() {
               >
                 Ajouter
               </Button>
+              <hr className="my-6" />
+              Images du produit
+              <div className="mt-10">
+                <Button type="submit" className="mz_btn-submit" size="lg">
+                  Ajouter un article
+                </Button>
+              </div>
             </form>
           </div>
         </div>

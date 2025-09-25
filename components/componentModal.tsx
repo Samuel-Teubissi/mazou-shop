@@ -74,7 +74,7 @@ export const Modal = () => {
                           src={product.img[i]}
                           width={158}
                           height={158}
-                          // className="w-full h-full"
+                          className="aspect-square"
                         />
                       </div>
                       <div className="flex flex-col justify-between gap-1 flex-1">
@@ -116,11 +116,7 @@ export const Modal = () => {
                     {formatPrice(Number(product.new_price) * 3)} F
                   </span>
                 </div>
-                <Button
-                  className="bg-brand-primary-500 hover:bg-brand-primary-400 uppercase font-bold text-white"
-                  onPress={onClose}
-                  size="lg"
-                >
+                <Button className="mz_btn-submit" onPress={onClose}>
                   Commander
                 </Button>
               </ModalFooter>

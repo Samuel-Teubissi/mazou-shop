@@ -51,11 +51,15 @@
 }
 
 .mz_dark-btn {
-  @apply bg-white/50 dark:bg-white/5 dark:text-white dark:hover:border-brand-primary-400 dark:hover:bg-brand-primary-500/30;
+  @apply text-black hover:text-white bg-white/50 hover:bg-brand-primary-500 dark:bg-white/5 dark:text-white dark:hover:border-brand-primary-400 dark:hover:bg-brand-primary-500/30 opacity-100 hover:opacity-100;
 }
 
-.mz_form input {
-  @apply dark:bg-dark-div2;
+.mz_btn-submit {
+  @apply bg-brand-primary-500 hover:bg-brand-primary-400 uppercase font-bold text-white hover:opacity-100;
 }
+
+/* .mz_access {
+  @apply focus:ring-2 focus:ring-focus focus:ring-offset-2 focus:ring-offset-background;
+} */
 
 @config "../tailwind.config.js";
