@@ -18,7 +18,7 @@ export const MazouFooter = () => {
           </Link>
           <div>MazouShop - La boutique en un click !</div>
         </div>
-        <div className="mz_footer-links grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4">
+        <div className="mz_footer-links grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8">
           <div className="space-y-1 md:col-span-2 lg:col-auto flex flex-col items-center md:items-start">
             <div>Payez facilement avec les services locaux</div>
             <div>

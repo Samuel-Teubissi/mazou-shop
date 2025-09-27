@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { mz_button } from '@/components/primitives'
 import { cn } from '@/config/utils'
 import { Button } from '@heroui/button'
+import { Link } from '@heroui/link'
 
 export const SearchInput = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -48,6 +49,8 @@ export const SearchInput = () => {
         {Link_navbar.map((link, index) => (
           <Button
             key={index}
+            as={Link}
+            href={'/?categorie=' + link}
             // onClick={handleSearch}
             className={clsx(
               mz_button({

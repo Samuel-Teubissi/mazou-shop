@@ -1,4 +1,6 @@
 import { heroui } from '@heroui/theme'
+// import variantGrouping from 'tailwindcss-variant-grouping'
+import UnoCSS from 'unocss/vite'
 
 /** @type {import('tailwindcss').Config} */
 const config = {
@@ -32,7 +34,11 @@ const config = {
       },
     },
   },
-  plugins: [heroui()],
+  plugins: [
+    heroui(),
+    // variantGrouping,
+    // UnoCSS(),
+  ],
 }
 
 module.exports = config
