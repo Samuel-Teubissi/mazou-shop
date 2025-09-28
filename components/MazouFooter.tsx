@@ -36,8 +36,10 @@ export const MazouFooter = () => {
             <div className="text-brand-primary-400 mb-1">Liens Utiles</div>
             <Link>Acceuil</Link>
             <Link>Mon panier</Link>
-            <Link>Politique de confidentialité</Link>
-            <Link>Politique de remboursement</Link>
+            <Link href="/legal/privacy-policy">
+              Politique de confidentialité
+            </Link>
+            <Link href="/legal/refund-policy">Politique de remboursement</Link>
           </div>
           <div className="flex flex-col items-center md:items-start gap-y-2">
             <div className="text-brand-primary-400 mb-1">Catégories</div>

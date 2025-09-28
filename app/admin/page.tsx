@@ -1,10 +1,10 @@
 'use client'
 
+import { MazouBreadcrumbs } from '@/components/MazouBreadcrumbs'
 import { title } from '@/components/primitives'
 import { Button } from '@heroui/button'
 import { Input } from '@heroui/input'
 import { Eye, EyeOff } from 'lucide-react'
-import Link from 'next/link'
 import { useState } from 'react'
 
 export default function BlogPage() {
@@ -27,15 +27,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <div className="text-small text-gray-700 py-3 px-6 max-w-6xl mx-auto box-border dark:text-dark-text mt-[80px] lg:mt-auto">
-        <Link
-          href="/"
-          title="Mazou Homepage"
-          className="hover:text-brand-primary-400"
-        >
-          {'<'} Retourner à l'acceuil
-        </Link>
-      </div>
+      <MazouBreadcrumbs />
       <div className="mz_container">
         <div className="mz_container-body mz_container-resp h-full">
           <div className="mz_container-bloc">
