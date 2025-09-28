@@ -15,10 +15,10 @@ import MazouCard from '@/components/MazouCard'
 export default function Home() {
   return (
     <>
-      <section className="flex flex-col items-center justify-center box-border gap-4 px-4 md:py-10 mt-[120px] lg:mt-[30px] mb-7 md:mb-10 flex-wrap h-auto">
+      <section className="flex flex-col items-center justify-center box-border gap-3 px-4 md:py-10 mt-[120px] lg:mt-[30px] mb-7 md:mb-10 flex-wrap h-auto">
         <div className="inline-block max-w-xl text-center justify-center">
           <span className={title()}>Bienvenue sur&nbsp;</span>
-          <span className="bg-gradient-to-br from-[#E44E4E] to-[#831f16] bg-clip-text text-transparent text-[2.5rem]/7 lg:text-6xl tracking-tight inline font-black">
+          <span className="bg-gradient-to-br from-[#E44E4E] to-[#831f16] bg-clip-text text-transparent text-5xl lg:text-7xl tracking-tight inline font-black">
             Mazou&nbsp;
           </span>
         </div>
@@ -28,14 +28,14 @@ export default function Home() {
           redirigé sur whatsapp pour discuter avec le fournisseur sur la
           livraison.
         </div>
-        <div className="mt-7">
+        <div className="mt-3 md:mt-7">
           <SearchInput />
         </div>
       </section>
 
       <div className="mz_container">
         <div className="mz_container-body px-3">
-          <div className="mz_Heading text-3xl">SPORT</div>
+          <div className="mz_Heading text-2xl md:text-3xl">SPORT</div>
           <div className="w-full gap-x-1 gap-y-3 md:gap-3 items-center grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {[...Array(8)].map((_, i) => (
               <div key={i}>

@@ -16,14 +16,14 @@ export const title = tv({
     size: {
       sm: 'text-3xl lg:text-4xl',
       md: 'text-[2.3rem]/7 lg:text-5xl',
-      lg: 'text-4xl lg:text-6xl',
+      lg: 'text-5xl',
     },
     fullWidth: {
       true: 'w-full block',
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'lg',
   },
   compoundVariants: [
     {
@@ -65,7 +65,7 @@ export const subtitle = tv({
 })
 
 export const mz_button = tv({
-  base: 'transition-colors duration-200 cursor-pointer active:scale-95',
+  base: 'transition-colors duration-200 cursor-pointer active:scale-95 opacity-100',
   variants: {
     bkg: {
       default: '',
@@ -81,7 +81,7 @@ export const mz_button = tv({
       false: '',
     },
     border: {
-      true: 'border border-gray-400 hover:border-gray-200',
+      true: 'border border-transparent hover:border-gray-200',
       false: '',
     },
     radius: {

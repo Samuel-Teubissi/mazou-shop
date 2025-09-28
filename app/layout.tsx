@@ -44,8 +44,8 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
           <div className="relative flex flex-col h-screen">
-            <header className="bg-white/30 dark:bg-dark-div/80 backdrop-blur-xl text-brand-primary-400 fixed py-3 w-full z-50">
-              <div className="flex items-center justify-between max-w-6xl px-6 mx-auto">
+            <header className="bg-white dark:bg-dark-div/80 backdrop-blur-xs text-brand-primary-400 fixed py-3 w-full z-50">
+              <div className="flex items-center justify-between max-w-6xl px-3 md:px-6 mx-auto">
                 <div className="flex items-center">
                   <span className="mr-4">LOGO</span>
                   <p className="font-bold hidden md:block">Mazou Shop</p>

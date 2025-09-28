@@ -8,6 +8,18 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: Manrope;
+  src: url('./fonts/Manrope-VariableFont.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: InterTight;
+  src: url('./fonts/InterTight-VariableFont.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   font-family:
@@ -71,10 +83,10 @@ body {
   right: 100vh;
 }
 .switchDark {
-  margin: 0.25rem 0;
+  /* margin: 0.25rem 0; */
   display: flex;
   align-items: center;
-  gap: 4px;
+  /* gap: 4px; */
   /* padding: 12px 2rem; */
   /* width: fit-content; */
   /* gap: 1.5rem; */
@@ -95,11 +107,11 @@ body {
 
 .switchDark label svg {
   background-color: var(--color_box);
-  border-radius: 50%;
-  height: 1.5rem;
-  width: 1.5rem;
-  padding: 0.3rem;
-  transition: transform 0.3s;
+  /* border-radius: 50%; */
+  /* height: 1.5rem; */
+  /* width: 1.5rem; */
+  /* padding: 0.3rem; */
+  /* transition: transform 0.3s; */
 }
 
 /* .switchDark input:checked + label svg {

@@ -24,7 +24,7 @@ interface Product {
 export default function MazouCard(props: { Item: Product }) {
   const item = props.Item
   return (
-    <div className="w-full border border-transparent mz_trans hover:border-brand-primary-400/50 shadow-small rounded-large text-foreground relative dark:bg-dark-div">
+    <div className="w-full border border-transparent mz_trans hover:border-brand-primary-400/50 md:shadow-small rounded-large text-foreground relative dark:bg-dark-div bg-white">
       <div className="absolute flex flex-col top-1/3 -left-2 gap-1 font-bold text-lg z-10">
         <span className="line-through mz_priceBand bg-gray-400/75 text-medium dark:text-black/90">
           <span className="mz_priceBand-tip-secondary"></span>
@@ -46,8 +46,8 @@ export default function MazouCard(props: { Item: Product }) {
           height={250}
         />
       </div>
-      <div className="items-center flex flex-col px-2 py-2 md:px-3 w-full">
-        <div className="py-5 md:px-2 font-bold text-center dark:text-dark-text">
+      <div className="md:items-center flex flex-col px-2 py-2 md:px-3 w-full">
+        <div className="py-2 md:py-5 md:px-2 font-bold text-center dark:text-dark-text">
           <Link
             href={'/product/' + item.id + '?categorie=' + item.product_category}
             className="text-inherit"
@@ -55,10 +55,12 @@ export default function MazouCard(props: { Item: Product }) {
             <span className="line-clamp-2">{item.title}</span>
           </Link>
         </div>
-        <div className="flex justify-center items-center gap-1 px-4 w-full">
+        <div className="flex md:justify-center md:items-center gap-1 w-full">
           <Button
-            className="bg-white/50 mz_dark-btn hover:bg-brand-primary-500/5 dark:text-white w-full sm:w-auto flex-1"
-            variant="bordered"
+            color="default"
+            className="bg-gray-800 mz_dark-btn hover:bg-brand-primary-500/5 dark:text-white w-full sm:w-auto flex-1"
+            variant="flat"
+            radius="sm"
           >
             <ShoppingBagIcon size={15} />
             <span className="sm:inline hidden">Ajouter au panier</span>

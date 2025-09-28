@@ -98,7 +98,7 @@ export default async function Page(props: {
               </div>
             </div>
           </div>
-          <div className="mz_container-bloc">
+          <div className="mz_container-bloc space-y-4 pt-8">
             <h3>Description du Produit</h3>
             <div
               dangerouslySetInnerHTML={{ __html: htmlDescription }}
