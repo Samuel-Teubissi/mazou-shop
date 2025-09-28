@@ -58,7 +58,7 @@ export const SearchInput = () => {
                 hoverBkg: true,
                 border: true,
               }),
-              'px-4 py-2 bg-white/50 mz_dark-btn dark:text-white',
+              'px-4 py-2 mz_dark-btn dark:text-white',
             )}
           >
             {link}
