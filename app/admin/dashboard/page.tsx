@@ -61,11 +61,7 @@ export default function BlogPage() {
                   defaultSelected
                   isSelected={discountChecked}
                   onValueChange={setDiscountChecked}
-                  classNames={{
-                    wrapper: `after:bg-brand-primary-400
-                    `,
-                    // icon: "text-white"
-                  }}
+                  classNames={{ wrapper: `after:bg-brand-primary-400` }}
                 >
                   Réduction de prix
                 </Checkbox>
