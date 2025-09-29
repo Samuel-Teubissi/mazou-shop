@@ -8,18 +8,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: Manrope;
-  src: url('./fonts/Manrope-VariableFont.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: InterTight;
-  src: url('./fonts/InterTight-VariableFont.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
 
 body {
   font-family:
@@ -39,6 +27,11 @@ body {
     position: absolute;
   }
 }
+
+/* body, */
+/* section {
+  background: url('/images/background.png') center/cover no-repeat;
+} */
 
 .mz_description {
   position: relative;

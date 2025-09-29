@@ -62,11 +62,7 @@ export default function BlogPage() {
                   isSelected={discountChecked}
                   onValueChange={setDiscountChecked}
                   classNames={{
-                    wrapper: `
-                      w-6 h-6 rounded-md border-2 border-gray-400
-                      data-[state=checked]:bg-purple-600
-                      data-[state=checked]:border-purple-600
-                      data-[state=unchecked]:hover:border-purple-400
+                    wrapper: `after:bg-brand-primary-400
                     `,
                     // icon: "text-white"
                   }}

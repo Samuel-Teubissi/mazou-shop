@@ -56,7 +56,7 @@ export default function RootLayout({
                 </div>
               </div>
             </header>
-            <main className="lg:mt-28 flex-1">{children}</main>
+            <main className="lg:pt-28 flex-1">{children}</main>
             <MazouFooter />
           </div>
         </Providers>
